@@ -10,6 +10,8 @@ const slides = [
     style: 'top-[10%] right-[5%]',
     text1: '보온단열재\n그라스울\n미네라울',
     style1: 'bottom-[20%] left-[8%]',
+    text2: '건축용\n단열재',
+    style2: 'top-[40%] left-[50%]',
   },
   {
     image: image2,
@@ -17,6 +19,7 @@ const slides = [
     style: 'top-[25%] left-[10%]',
     text1: '소재\n장섬유',
     style1: 'bottom-[15%] right-[10%]',
+    // No text2
   },
   {
     image: image3,
@@ -24,6 +27,8 @@ const slides = [
     style: 'top-[25%] left-[70%]',
     text1: '보온단열재\n그라스울\n미네라울',
     style1: 'bottom-[10%] left-[10%]',
+    text2: '기능성\n외장재',
+    style2: 'top-[50%] right-[15%]',
   },
 ];
 
@@ -37,14 +42,14 @@ const Hero2 = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const { image, text, text1, style, style1 } = slides[current];
+  const { image, text, style, text1, style1, text2, style2 } = slides[current];
 
   return (
-    <section className="w-full flex items-center justify-center px-16 py-12 h-screen bg-white transition-all duration-700">
+    <section className="w-full flex items-center justify-center px-6 md:px-16 py-12 h-screen bg-white transition-all duration-700">
       {/* Text Section */}
       <div className="ml-8 w-[70%] space-y-4">
         <p className="text-[#BE8226] font-extrabold text-xl">Construction</p>
-        <h1 className="text-5xl font-extrabold text-black">
+        <h1 className="text-5xl font-extrabold text-black leading-tight">
           다양한 건축자재를
           <br />
           생산합니다.
@@ -56,8 +61,8 @@ const Hero2 = () => {
         </p>
       </div>
 
-      {/* Image + Floating Labels */}
-      <div className="w-full h-[85vh] cursor-pointer relative flex items-center justify-center bg-white transition-all duration-1000 overflow-hidden">
+      {/* Image Section */}
+      <div className="w-full h-[85vh] cursor-pointer relative flex items-center justify-center bg-white overflow-hidden transition-all duration-1000">
         <img
           src={image}
           alt="hero"
@@ -76,6 +81,14 @@ const Hero2 = () => {
           className={`absolute bg-white text-black font-semibold text-sm whitespace-pre-line px-4 py-2 border border-black shadow-md rounded-sm ${style1} transition-all duration-700`}>
           {text1}
         </div>
+
+        {/* Conditional Floating Text 3 */}
+        {text2 && (
+          <div
+            className={`absolute bg-white text-black font-semibold text-sm whitespace-pre-line px-4 py-2 border border-black shadow-md rounded-sm ${style2} transition-all duration-700`}>
+            {text2}
+          </div>
+        )}
       </div>
     </section>
   );
