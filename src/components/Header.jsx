@@ -31,12 +31,12 @@ const Header = () => {
 
       {/* Nav container */}
       <div className="relative flex items-end justify-center w-full px-6">
-        <div className="flex items-center justify-center gap-0 w-full max-w-[470px] px-[4px] py-[4px] h-[48px] bg-white rounded-full shadow-md">
+        <div className="flex items-center justify-center gap-0 w-full max-w-[480px] px-[4px] py-[4px] h-[48px] bg-white rounded-full shadow-md">
           {navItems.map(item => (
             <button
               key={item.label}
               onClick={() => setActiveTab(item.label)}
-              className={`relative px-[17px] py-2 text-sm rounded-full font-medium transition-all duration-200
+              className={`relative px-[19px] py-[11px] text-sm rounded-full font-medium transition-all duration-200
                 ${
                   activeTab === item.label
                     ? 'bg-[#BE8226] text-white shadow'
