@@ -23,7 +23,9 @@ const Hero3 = () => {
   }, []);
 
   return (
-    <section className="w-full h-screen bg-[#E3D7C8] flex items-center justify-center px-6 md:px-16 scroll-smooth">
+    <section
+      id="hero2"
+      className="w-full h-screen bg-[#E3D7C8] flex items-center justify-center px-6 md:px-16 scroll-smooth">
       <div className="max-w-5xl w-full text-center">
         <p className="text-[32px] md:text-[48px] leading-[140%] text-[#647066] font-semibold tracking-wide">
           우리는 환경친화적이고 다양한 기능을 갖춘 건축자재를 생산합니다.

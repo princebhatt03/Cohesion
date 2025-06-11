@@ -4,6 +4,7 @@ import backgroundImage from '../assets/images/hero-image1.avif';
 const Hero = () => {
   return (
     <section
+      id="hero0"
       className="relative h-[90vh] w-full bg-cover bg-center text-[#E1D8CF] flex items-center justify-start px-6 md:px-16"
       style={{ backgroundImage: `url(${backgroundImage})` }}>
       {/* Overlay for dark blur effect (optional) */}

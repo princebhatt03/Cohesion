@@ -45,7 +45,9 @@ const Hero2 = () => {
   const { image, text, style, text1, style1, text2, style2 } = slides[current];
 
   return (
-    <section className="w-full flex items-center justify-center px-6 md:px-16 py-12 h-screen bg-white transition-all duration-700">
+    <section
+      id="hero1"
+      className="w-full flex items-center justify-center px-6 md:px-16 py-12 h-screen bg-white transition-all duration-700">
       {/* Text Section */}
       <div className="ml-8 w-[70%] space-y-4">
         <p className="text-[#BE8226] font-extrabold text-xl">Construction</p>

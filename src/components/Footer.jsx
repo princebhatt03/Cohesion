@@ -13,14 +13,14 @@ const Footer = () => {
     <footer className="bg-[#333333] text-white min-h-[70vh] px-10 md:px-24 py-25">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-16 h-full">
         {/* Left Section */}
-        <div className="flex-1 flex flex-col justify-between">
+        <div className="flex-1 flex relative flex-col justify-between">
           <p className="text-sm text-gray-300 max-w-xs leading-relaxed">
             Celebrate the joy of accomplishment with an app designed to track
             your progress, motivate your efforts, and celebrate your successes.
           </p>
 
           {/* Social Icons */}
-          <div className="flex space-x-5 mt-8 text-gray-300 text-xl">
+          <div className="flex top-44 absolute space-x-5 mt-8 text-gray-300 text-xl">
             <FaXTwitter className="hover:text-white cursor-pointer" />
             <FaInstagram className="hover:text-white cursor-pointer" />
             <FaPinterest className="hover:text-white cursor-pointer" />
@@ -31,7 +31,7 @@ const Footer = () => {
         </div>
 
         {/* Right Section - 4 Columns */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-12 flex-[2]">
+        <div className="grid grid-cols-2 absolute right-2 px-20 md:grid-cols-4 gap-16 flex-[2]">
           {/* Column 1 */}
           <div>
             <h3 className="font-semibold mb-4 text-white text-base">Product</h3>
