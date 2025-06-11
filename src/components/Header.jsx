@@ -26,7 +26,7 @@ const Header = () => {
     <header className="flex justify-center pt-6 fixed top-0 left-0 w-full z-50">
       {/* Scroll-based blur background */}
       {showBlur && (
-        <div className="fixed top-0 left-0 w-full h-24 bg-white/10 backdrop-blur-lg -z-10 transition-opacity duration-300 pointer-events-none" />
+        <div className="fixed top-0 left-0 w-full h-18 bg-white/10 backdrop-blur-lg -z-10 transition-opacity duration-300 pointer-events-none" />
       )}
 
       {/* Nav container */}
