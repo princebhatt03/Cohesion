@@ -12,10 +12,10 @@ const Hero = () => {
 
       {/* Hero Content */}
       <div className="relative z-10 text-justify p-20 max-w-6xl">
-        <h1 className="text-5xl md:text-5xl font-bold leading-snug md:leading-tight">
+        <h1 className="text-5xl md:text-[60px ] font-bold leading-snug md:leading-tight">
           탄소는 줄이고, 미래를 지었습니다.
         </h1>
-        <h1 className="mt-4 text-justify text-4xl md:text-5xl font-semibold">
+        <h1 className="mt-4 text-justify text-[60px] md:text-5xl font-bold">
           플라스틱 대비 98% 절감 솔루션.
         </h1>
 

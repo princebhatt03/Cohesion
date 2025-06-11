@@ -65,7 +65,7 @@ const Hero4 = () => {
       {/* Custom pointer */}
       {pointerVisible && (
         <div
-          className="fixed z-50 px-3 py-1 bg-white text-black text-sm font-semibold rounded-xl pointer-events-none mix-blend-difference transition-all duration-150"
+          className="fixed z-50 px-6 py-3 bg-white text-black text-sm font-semibold rounded-full pointer-events-none shadow-md border transition-all duration-150"
           style={{
             top: pointerPosition.y,
             left: pointerPosition.x,
