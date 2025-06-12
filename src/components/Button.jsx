@@ -1,30 +1,40 @@
 import React, { useState } from 'react';
-import { ArrowRight } from 'lucide-react';
+import { BsArrowDownCircle } from 'react-icons/bs';
 
-const SlideButton = ({ text = 'Explore' }) => {
+const Button = () => {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <>
-      <div className="flex items-center justify-center">
-        <button
-          onMouseEnter={() => setHovered(true)}
-          onMouseLeave={() => setHovered(false)}
-          className="relative group bg-white text-black px-10 py-4 rounded-full overflow-hidden font-semibold transition-all duration-300 border border-black">
-          <span className="relative z-10">{text}</span>
+    <div className="w-full h-fit flex items-center justify-center bg-white">
+      <button
+        className="relative px-18 py-5 rounded-full font-raleway text-xl tracking-widest text-[#080707] bg-white border-[7px] border-[#dadbeb] overflow-hidden cursor-pointer flex items-center justify-center gap-4"
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}>
+        {/* Main text with small left shift on hover */}
+        <span
+          className={`relative z-10 transition-all duration-[400ms] ease-[cubic-bezier(0.56,0.51,0.85,0.84)]
+            ${hovered ? '-translate-x-4' : 'translate-x-0'}`}>
+          더 보기
+        </span>
 
-          {/* Sliding circle with arrow */}
-          <div
-            className={`absolute right-2 top-1/2 -translate-y-1/2 bg-black text-white w-8 h-8 rounded-full flex items-center justify-center transition-transform duration-500 ${
-              hovered ? 'translate-x-0' : 'translate-x-16'
+        {/* Arrow comes in from right */}
+        <span
+          className={`absolute right-6 top-1/2 -translate-y-1/2 transition-all duration-[450ms] ease-[cubic-bezier(0.56,0.51,0.85,0.84)] z-0
+            ${
+              hovered
+                ? 'translate-x-0 opacity-100'
+                : 'translate-x-full opacity-0'
             }`}>
-            <span className="relative z-10">{text}</span>
-            <ArrowRight size={16} />
+          <div className="bg-black rounded-full p-2">
+            <BsArrowDownCircle
+              size={40}
+              className="text-white"
+            />
           </div>
-        </button>
-      </div>
-    </>
+        </span>
+      </button>
+    </div>
   );
 };
 
-export default SlideButton;
+export default Button;
